@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador de Dias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #574f4f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #852828;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #0074cc;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0054a3;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Somador de Dias</h1>
+        <label for="days">Dias para somar:</label>
+        <input type="number" id="days" placeholder="Digite o número de dias">
+        <button onclick="calculateDate()">Calcular Data</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateDate() {
+            const daysInput = document.getElementById('days');
+            const resultParagraph = document.getElementById('result');
+
+            const daysToAdd = parseInt(daysInput.value);
+            if (!isNaN(daysToAdd)) {
+                const currentDate = new Date();
+                currentDate.setDate(currentDate.getDate() + daysToAdd);
+
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = currentDate.toLocaleDateString('pt-BR', options);
+
+                resultParagraph.textContent = `A data após somar ${daysToAdd} dias será: ${formattedDate}`;
+            } else {
+                resultParagraph.textContent = 'Por favor, digite um número válido de dias.';
+            }
+        }
+    </script>
+</body>
+</html>
