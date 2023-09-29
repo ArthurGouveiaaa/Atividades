@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+        background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+}
+
+h1 {
+    color: brown;
+}
+
+h2 {
+    color: black;
+}
+
+
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#1394bb, #E0F6FF);
+}
+
+.pipe {
+   position: absolute;
+   bottom: 0;
+   width: 80px;
+   animation: pipe-animation 2s infinite linear;
+
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+} 
+
+.jump{
+
+    animation: jump 500ms ease-out;
+}
+
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+     }
+
+    100% {
+        bottom: 0;
+    }
+
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+
+}
+
+/* Estilos para o elemento de exibição da pontuação */
+.score {
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Coloca o score no canto direito da tela */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destaque */
+    color: #FFFFFF; /* Cor do texto */
+    background-color: #333; /* Cor de fundo */
+    padding: 10px 20px; /* Espaçamento interno para o elemento de pontuação */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+.audio-button {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.audio-button:hover {
+    background-color: #0056b3;
+}

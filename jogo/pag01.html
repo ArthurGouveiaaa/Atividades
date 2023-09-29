@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mário Jump - Tela Inicial</title>
+    <style>
+        /* Estilos para centralizar o conteúdo na tela */
+        body {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 50vh; /* Altura da tela inteira */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-screen">
+        <h1>Bem-vindo ao Mário Jump</h1>
+        <br>
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" placeholder="Digite seu nome">
+        <a href="index.html">Iniciar Jogo</a> <!-- Use um link para redirecionar para index.html -->
+        <div class="high-score">
+            <br>
+            <p>Maior Pontuação: <span id="high-score">0</span></p>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>

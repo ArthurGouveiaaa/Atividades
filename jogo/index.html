@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+
+
+    <title>Mário Jump</title>
+</head>
+<body>
+
+    <div class="game-board">
+        <span class="score">0</span>
+    
+<img src="image/clouds.png" class="clouds">
+<img src="image/mario.gif" class="mario">       
+<img src="image/pipe.png" class="pipe">
+
+
+    </div>
+
+    <div id="audio-control-container">
+        <button id="audio-control-button" class="audio-button">Ligar/Desligar Som</button>
+    </div>
+    
+    <div class="game-over">
+        <a href="pag01.html"><button id="return-to-start">Voltar para a Tela Inicial</button></a>
+
+    <audio id="background-music" loop autoplay>
+        <source src="sounds.mp3" type="audio/mpeg">
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+    
+    
+</body>
+</html>
